@@ -25,13 +25,13 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="row">
-        <div class="col-6">
+      <div class="row p-2 p-sm-0">
+        <div class="col-6 col-sm-6 p-0">
           <p class="header__title title">Социальные сети</p>
           <p class="subtitle">Делитесь постами из соцсетей</p>
         </div>
 
-        <div class="col-6">
+        <div class="col-7 col-sm-6 p-0">
           <div class="header__btn">
             <button class="header__btn-add-post button">
               <i class="bi bi-plus-circle"></i>
@@ -55,21 +55,21 @@
 
   <main>
     <div class="container content">
-      <div class="row">
-        <div class="col-7 pl-0">
+      <div class="row p-2 p-sm-0">
+        <div class="col col-sm-7 col-md-8 p-0">
           <span class="column-title">Пост</span>
         </div>
-        <div class="col-3">
+        <div class="col-4 col-sm-3 col-md-3 p-0">
           <span class="column-title">Опубликовано</span>
         </div>
-        <div class="col-2">
+        <div class="col-2 col-sm-2 col-md-1 p-0">
           <span class="column-title">Ссылка</span>
         </div>
       </div>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="nav-instagram" role="tabpanel" aria-labelledby="nav-instagram-tab">
-          <article class="row post">
-            <div class="col-7">
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
               <div class="post__content">
                 <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
                 <div class="post__text">
@@ -78,38 +78,246 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-4 col-sm-3 col-md-3 p-0">
               <div class="post__info">
                 <div class="post__status post__status--done"></div>
                 <div class="post__data">
                   <span class="post__name">altenar</span>
-                  <time class="post__date" datetime="2022-02-25">25/02/2022</time>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
                 </div>
               </div>
             </div>
-
-            <div class="col-2">
-              <div class="post__btns">
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
                 <button class="post__link">
-                  <svg width="24" height="24" viewBox="0 0 20 10" fill="#757575">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
                     <path
                       d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
                     </path>
                   </svg>
                 </button>
-                <button class="post__link">
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                   <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
                     <path
                       d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                   </svg>
                 </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--unpublished"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--loading"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button disabled class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button disabled class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--unpublished"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--done"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--done"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
               </div>
             </div>
           </article>
         </div>
         <div class="tab-pane fade" id="nav-vkontakte" role="tabpanel" aria-labelledby="nav-vkontakte-tab">
-          <article class="row post">
-            <div class="col-7">
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
               <div class="post__content">
                 <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
                 <div class="post__text">
@@ -118,31 +326,239 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-4 col-sm-3 col-md-3 p-0">
               <div class="post__info">
                 <div class="post__status post__status--done"></div>
                 <div class="post__data">
                   <span class="post__name">altenar</span>
-                  <time class="post__date" datetime="2022-02-25">25/02/2022</time>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
                 </div>
               </div>
             </div>
-
-            <div class="col-2">
-              <div class="post__btns">
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
                 <button class="post__link">
-                  <svg width="24" height="24" viewBox="0 0 20 10" fill="#757575">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
                     <path
                       d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
                     </path>
                   </svg>
                 </button>
-                <button class="post__link">
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
                   <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
                     <path
                       d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                   </svg>
                 </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--unpublished"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--loading"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button disabled class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button disabled class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--unpublished"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--done"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="row post p-2 p-sm-0">
+            <div class="col col-sm-7 col-md-8 p-0">
+              <div class="post__content">
+                <img src="img/onion.jpg" class="post__img" alt="Лук в недоумении">
+                <div class="post__text">
+                  <span class="post__title">Onion</span>
+                  <span class="post__user description">@altenar</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3 p-0">
+              <div class="post__info">
+                <div class="post__status post__status--done"></div>
+                <div class="post__data">
+                  <span class="post__name">altenar</span>
+                  <time class="post__date description" datetime="2022-02-25">25/02/2022</time>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-sm-2 col-md-1 p-0 p-0">
+              <div class="post__btns dropdown">
+                <button class="post__link">
+                  <svg width="24" height="10" viewBox="0 0 20 10" fill="#757575">
+                    <path
+                      d="M1.9 5C1.9 3.29 3.29 1.9 5 1.9H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8.1H5C3.29 8.1 1.9 6.71 1.9 5ZM6 6H14V4H6V6ZM15 0H11V1.9H15C16.71 1.9 18.1 3.29 18.1 5C18.1 6.71 16.71 8.1 15 8.1H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0Z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="post__link " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                  <svg width="16" height="16" fill="rgba(0, 0, 0, 0.54)" viewBox="0 0 16 16">
+                    <path
+                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuButton">
+                  <li class="dropdown-item">Опубликовать</li>
+                  <li class="dropdown-item">Удалить</li>
+                </ul>
               </div>
             </div>
           </article>
@@ -151,5 +567,4 @@
     </div>
   </main>
 </body>
-
 </html>

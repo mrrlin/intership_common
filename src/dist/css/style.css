@@ -1,7 +1,6 @@
 :root {
     font-size:16px;
 }
-
 /*COMMON begin*/
 .title {
     font-size: 2.25rem;
@@ -31,20 +30,30 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 /*COMMON end*/
-
 body {
     font-family: "Roboto", 'sans-serif';
     color: #000000;
     box-sizing: border-box;
     font-weight: 400;
+    overflow-x: hidden;
 }
 .header {
     background: rgba(0, 0, 0, 0.04);
     padding-top: 60px;
 }
+@media(max-width:575px) {
+    .header {
+        padding-top: 30px;
+    }
+}
 .header__btn {
     display: flex;
     justify-content: flex-end;
+}
+@media(max-width:575px) {
+    .header__btn {
+        justify-content: flex-start;
+    }
 }
 .header__btn-add-post {
     display: flex;
@@ -52,7 +61,13 @@ body {
     padding: 8px 22px;
 }
 .social-network {
+    border: none;
     margin-top: 32px;
+}
+@media(max-width:575px) {
+    .social-network {
+        margin-top: 16px;
+    }
 }
 .social-network>.social-network__tab {
     border: none;
@@ -64,14 +79,25 @@ body {
     letter-spacing: 0.4px;
     padding: 12px 40px;
 }
+@media(max-width:575px) {
+    .social-network>.social-network__tab {
+        padding: 10px 30px;
+    }
+}
 .social-network>.social-network__tab.active {
     color: #2196F3;
     border-bottom: 2px solid #2196F3;
 }
-
 /*MAIN begin*/
-.content{
-    margin-top: 30px;  
+.content {
+    margin-top: 30px; 
+    margin-bottom: 45px; 
+}
+@media(max-width:575px) {
+    .content {
+        margin-top: 15px;
+        margin-bottom: 23px;   
+    }
 }
 .column-title{
     font-weight: 500;
@@ -83,11 +109,16 @@ body {
     align-items: center;
     margin-top: 25px;
 }
+@media(max-width:575px) {
+    .post {
+        margin-top: 10px;
+    }
+}
 .post__content {
     display: flex;
     align-items: center;
 }
-.post__title{
+.post__title {
     font-size: 0.875rem;
     line-height: 20px;
     letter-spacing: 0.15px;
@@ -116,14 +147,45 @@ body {
     cursor: pointer;
     position: relative;
 }
+.post__status::before {
+    content:'';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 22px;
+    position: absolute;
+    top: 15px;
+    left: -400%;
+    visibility: hidden;
+    background: rgba(97, 97, 97, 0.9);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.625rem;
+    line-height: 14px;
+    transition: 0.1s ease;
+}
+.post__status:hover::before {
+visibility: visible;
+}
 .post__status--done{
     background: #4CAF50;
 }
-.post__status--unpublished{
+.post__status--done::before {
+    content: "Опубликовано";
+}
+.post__status--unpublished {
     background: #F44336;
 }
-.post__status--loading{
+.post__status--unpublished::before {
+    content: "Неопубликовано";
+}
+.post__status--loading {
     background: #FF9800;
+}
+.post__status--loading::before {
+    content: "Загружается";
 }
 .post__data {
     display: flex;
@@ -134,13 +196,48 @@ body {
     line-height: 20px;
     letter-spacing: 0.15px;
 }
-.post__date {}
-.post__btns {}
+.post__btns {
+    display: flex;
+    justify-content: space-between;
+}
 .post__link {
+    position: relative;
     width: 24px;
     height: 24px;
     padding: 0;
     background-color: transparent;
     border: none;
 }
+.post__link::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: rgba(33, 150, 243, 0.04);
+    border-radius: 48px;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transition: 0.2s ease;
+    visibility: hidden;
+}
+@media (any-hover: hover){
+    .post__link:hover::after {
+        visibility: visible;
+    }
+    .post__link:hover>svg {
+        fill: #2196F3;
+    }
+}
+.post__link[disabled]>svg,
+.post__link[disabled]:hover>svg,
+.post__link[disabled]:active>svg {
+    fill: #E0E0E0;
+}
+.post__link[disabled]:hover:after,
+.post__link[disabled]:active:after {
+    background: transparent;
+    visibility: hidden;
+}
+
 /*MAIN end*/
