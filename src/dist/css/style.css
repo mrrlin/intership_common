@@ -35,7 +35,6 @@ body {
     color: #000000;
     box-sizing: border-box;
     font-weight: 400;
-    overflow-x: hidden;
 }
 .header {
     background: rgba(0, 0, 0, 0.04);
@@ -221,12 +220,17 @@ visibility: visible;
     transition: 0.2s ease;
     visibility: hidden;
 }
-@media (any-hover: hover){
+@media (any-hover: hover) {
     .post__link:hover::after {
         visibility: visible;
     }
     .post__link:hover>svg {
         fill: #2196F3;
+    }
+}
+@media(max-width:575px) {
+    .post__link::after {
+        display: none;
     }
 }
 .post__link[disabled]>svg,
@@ -239,5 +243,4 @@ visibility: visible;
     background: transparent;
     visibility: hidden;
 }
-
 /*MAIN end*/
